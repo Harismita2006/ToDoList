@@ -1,0 +1,29 @@
+.app-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling when background is fixed */
+  }
+  
+  .app-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/background.mp4') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  h1 {
+    color: white; /* Ensure text is visible on video */
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav {
+    position: relative;
+    z-index: 1;
+  }
+  
